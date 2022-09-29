@@ -5,24 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magasin De Vidéo</title>
     <style>
-        
+        *, *::after,*::before {
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+        }
+        nav p{
+            display: inline;
+            font-size: 35px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+            background-color: black;
+            padding: 15px;
+            margin: 0px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            font-weight: bold;
+        }
+        ul li:hover{
+            text-decoration: underline;
+        }
+        nav ul li{
+            padding: 10px;
+            font-size: 20px;
+        }
+        .breadcrumb{
+            padding: 0px;
+        }
+        .breadcrumb li+li::before{
+            content: "/\00a0";
+            padding: 15px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        .video-section{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .video-card{
+            border: 2px solid grey;
+            padding: 5px;
+            margin: 5px;
+            height: max-content;
+        }
+        .video-card img {
+            width: 200px;
+            height: 200px;
+        }
+        .card-body p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 5px;
+            font-weight: 400;
+        }
+        .card-body .card-details p:first-child{
+            color: grey;
+        }
+        .card-body .card-details p:nth-child(3){
+            color: green;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <p>
-            Logo
-        </p>
-        <ul>
-            <li>Videos to rent</li>
-            <li>Videos to buy</li>
-            <li>Used DVDs</li>
-            <li>Offers</li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <p>
+                Logo
+            </p>
+            <ul>
+                <li>Videos to rent</li>
+                <li>Videos to buy</li>
+                <li>Used DVDs</li>
+                <li>Offers</li>
+            </ul>
+        </nav>
+    </header>
     <section>
         <div>
-            <ul>
+            <ul class="breadcrumb">
                 <li>Home</li>
                 <li>Used DVDs</li>
                 <li>less than £10</li>
@@ -37,10 +101,45 @@
                 <div class="video-card">
                     <img src="video-pic.png" alt="">
                     <div class="card-body">
-                        <p>Video title 1</p>
-                        <p>RRP : £18.99</p>
-                        <p>Price you pay £9.</p>
-                        <p>Video title 1</p>
+                        <h3>Video title 1</h3>
+                        <div class="card-details">
+                            <p>RRP : £18.99</p>
+                            <p>Price you pay : <u>£9.99</u></p>
+                            <p>Your saving : £9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="video-pic.png" alt="">
+                    <div class="card-body">
+                        <h3>Video title 1</h3>
+                        <div class="card-details">
+                            <p>RRP : £18.99</p>
+                            <p>Price you pay : <u>£9.99</u></p>
+                            <p>Your saving : £9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="video-pic.png" alt="">
+                    <div class="card-body">
+                        <h3>Video title 1</h3>
+                        <div class="card-details">
+                            <p>RRP : £18.99</p>
+                            <p>Price you pay : <u>£9.99</u></p>
+                            <p>Your saving : £9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="video-pic.png" alt="">
+                    <div class="card-body">
+                        <h3>Video title 1</h3>
+                        <div class="card-details">
+                            <p>RRP : £18.99</p>
+                            <p>Price you pay : <u>£9.99</u></p>
+                            <p>Your saving : £9</p>
+                        </div>
                     </div>
                 </div>
             </div>
